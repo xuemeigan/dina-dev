@@ -21,7 +21,6 @@ services:
       mvn
       -f /app/pom.xml
       -Duser.home=/var/maven
-      -Dspring-boot-maven-plugin.fork=true
       -Dspring.datasource.url=jdbc:postgresql://database/objectstore?currentSchema=object_store
       -Dspring.datasource.username=postgres
       -Dspring.datasource.password=p
@@ -34,5 +33,5 @@ services:
       -Dminio.port=9000
       -Dminio.accessKey=minio
       -Dminio.secretKey=minio123
-      install
+      -Dit.test=ObjectUploadRepositoryCRUDIT  -Dtest=ObjectUploadRepositoryCRUDIT verify
       "

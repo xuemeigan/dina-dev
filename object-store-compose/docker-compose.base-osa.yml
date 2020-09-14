@@ -39,8 +39,8 @@ services:
       minio.secretKey: minio123
     labels:
       - "traefik.http.routers.objectstore-api.rule=Host(`${DINAUI_DOMAIN}`)"
-    #ports: 
-    #  - "80:8080"
+    ports: 
+      - "80:8080"
   traefik:
     image: traefik:v2.2.0
     command: --providers.docker=true

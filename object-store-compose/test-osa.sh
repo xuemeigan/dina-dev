@@ -8,4 +8,4 @@ DC_TEST="docker-compose -p dina-object-store-api-osa-test -f ./docker-compose.ba
 #docker-compose -p dina-object-store-api-osa-test -f ./docker-compose.base-osa.yml -f ./docker-compose.test-osa.yml $@ 
 $DC_TEST up -d --scale mvn-test-osa=0 --scale ui=0 --scale api=0
 $DC_TEST up mvn-test-osa
-$DC_TEST down
+#$DC_TEST down
