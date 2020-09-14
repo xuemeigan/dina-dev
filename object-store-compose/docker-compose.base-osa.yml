@@ -1,0 +1,71 @@
+# Common base Compose file for dev/test/prod environments:
+version: "3.7"
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${SUBNET}
+services:
+  database:
+    image: postgres:9.6
+    environment:
+      POSTGRES_DB: objectstore
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p
+    volumes:
+      - ./initdb.sql:/docker-entrypoint-initdb.d/1-initdb.sql
+    ports:
+      - "5432:5432"
+  minio:
+    image: minio/minio
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server /data
+  objectstore-api:
+    image: objectstore-api:tag
+    environment:
+      spring.datasource.url: jdbc:postgresql://database/objectstore?currentSchema=object_store
+      spring.datasource.username: postgres
+      spring.datasource.password: p
+      spring.datasource.continue-on-error: "true"
+      spring.liquibase.user: postgres
+      spring.liquibase.password: p
+      spring.servlet.multipart.max-file-size: 2GB
+      spring.servlet.multipart.max-request-size: 2GB
+      minio.host: minio
+      minio.port: 9000
+      minio.accessKey: minio
+      minio.secretKey: minio123
+    labels:
+      - "traefik.http.routers.objectstore-api.rule=Host(`${DINAUI_DOMAIN}`)"
+    #ports: 
+    #  - "80:8080"
+  traefik:
+    image: traefik:v2.2.0
+    command: --providers.docker=true
+    ports:
+      - "80" # Traefik-connected services
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock
+        
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
