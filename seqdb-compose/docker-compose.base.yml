@@ -51,7 +51,7 @@ services:
   seqdb-ui:
     image: seqdb-ui:tag
     environment:
-      SEQDB_API_ADDRESS: seqdb-api:8080
+      API_ADDRESS: seqdb-api:8080
       KEYCLOAK_CLIENTID: seqdb
       KEYCLOAK_REALM: dina
       KEYCLOAK_PUBLIC_URL: http://${KEYCLOAK_DOMAIN}/auth

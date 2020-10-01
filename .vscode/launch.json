@@ -2,6 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Debug (Attach)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5005
+    },
+  
+    
+    {
       "name": "Attach java",
       "request": "attach",
       "type": "java",

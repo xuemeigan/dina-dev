@@ -13,3 +13,19 @@ url = https://github.com/AAFC-BICoE/seqdb-api.git
 [submodule "agent-api"]
 path = repos/agent-api
 url = https://github.com/AAFC-BICoE/agent-api.git
+
+
+[submodule "collection-specs"]
+path = repos/collection-specs
+url = https://github.com/DINA-Web/collection-specs.git
+
+[submodule "agent-specs"]
+path = repos/agent-specs
+url = https://github.com/DINA-Web/agent-specs.git
+
+[submodule "dina-dev-doc"]
+path = repos/dina-dev-doc
+url = https://github.com/xuemeigan/dina-dev-doc.git
+
+
+
