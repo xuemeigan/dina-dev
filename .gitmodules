@@ -27,5 +27,8 @@ url = https://github.com/DINA-Web/agent-specs.git
 path = repos/dina-dev-doc
 url = https://github.com/xuemeigan/dina-dev-doc.git
 
+[submodule "object-store-specs"]
+path = repos/object-store-specs
+url = https://github.com/DINA-Web/object-store-specs
 
 
