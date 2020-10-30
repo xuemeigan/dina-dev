@@ -52,7 +52,7 @@ services:
     environment:
       AGENT_API_ADDRESS: agent-api:8080
       OBJECTSTORE_API_ADDRESS: objectstore-api:8080
-      DINAUSER_API_ADDRESS: dinauser-api:8080
+      USER_API_ADDRESS: dinauser-api:8080
       KEYCLOAK_CLIENTID: objectstore
       KEYCLOAK_REALM: dina
       KEYCLOAK_PUBLIC_URL: http://${KEYCLOAK_DOMAIN}/auth

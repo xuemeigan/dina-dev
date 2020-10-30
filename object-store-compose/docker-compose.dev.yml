@@ -39,7 +39,7 @@ services:
         -Dkeycloak.enabled=true
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean spring-boot:run
       "
   agent-api:
     image: maven:3.6.3-jdk-11
@@ -74,7 +74,7 @@ services:
         -Dkeycloak.resource=objectstore
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean spring-boot:run
       "
   dinauser-api:
     image: maven:3.6.3-jdk-11
@@ -109,7 +109,7 @@ services:
         -Dkeycloak.resource=realm-management
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean spring-boot:run
       "
     
   # Nextjs's dev-mode server that hot-reloads the UI source code:
