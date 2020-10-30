@@ -1,0 +1,67 @@
+# Common base Compose file for dev/test/prod environments:
+version: "3.7"
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${SUBNET}
+services:
+  database:
+    image: postgres:12.4
+    environment:
+      POSTGRES_DB:  dina_user_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p
+    volumes:
+      - ./init-user-module.sql:/docker-entrypoint-initdb.d/1-init-schema.sql
+    ports:
+      - "5432:5432"
+  keycloak:
+    image: jboss/keycloak:11.0.0
+    user: root
+    command: ["-Djboss.http.port=80"]
+    expose: [80]
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_IMPORT: /keycloak-realm.json
+      DB_VENDOR: POSTGRES
+      DB_ADDR: database
+      DB_DATABASE: dina_user_test
+      DB_USER: postgres
+      DB_PASSWORD: p
+      DB_SCHEMA: keycloak
+    volumes:
+      - "../keycloak-dina-starter-realm.json:/keycloak-realm.json"
+    labels:
+      - "traefik.http.routers.keycloak.rule=Host(`${KEYCLOAK_DOMAIN}`)"
+    networks:
+      default:
+        # Here we set the IP for Keycloak
+        ipv4_address: ${KEYCLOAK_IP}
+
+  dina-user-api:
+    image: dina-user-api:tag
+    environment:
+      spring.datasource.url: jdbc:postgresql://database/dina_user_test?currentSchema=dina_user
+      spring.datasource.username: postgres
+      spring.datasource.password: p
+      spring.datasource.continue-on-error: "true"
+      spring.liquibase.user: postgres
+      spring.liquibase.password: p
+    labels:
+      - "traefik.http.routers.objectstore-api.rule=Host(`${DINAUI_DOMAIN}`)"
+    ports:
+      - "80:8080"
+        
+  traefik:
+    image: traefik:v2.2.0
+    command: --providers.docker=true
+    ports:
+      - "80" # Traefik-connected services
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock
+
+
+

@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS dina_user;
+CREATE SCHEMA keycloak;
