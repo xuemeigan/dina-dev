@@ -33,5 +33,5 @@ services:
       -Dminio.port=9000
       -Dminio.accessKey=minio
       -Dminio.secretKey=minio123
-      -Dit.test=ObjectUploadRepositoryCRUDIT  -Dtest=ObjectUploadRepositoryCRUDIT verify
+      checkstyle:check  com.github.spotbugs:spotbugs-maven-plugin:check verify
       "
