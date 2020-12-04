@@ -6,9 +6,9 @@
   "clients": [
     {
       "id": "fe3ef8c1-e615-4528-960b-e86b3102c7c0",
-      "clientId": "objectstore",
+      "clientId": "dina",
       "enabled": true,
-      "directAccessGrantsEnabled": true,
+      "directAccessGrantsEnabled": false,
       "publicClient": true,
       "redirectUris": ["*"],
       "defaultClientScopes": [
@@ -17,10 +17,26 @@
         "role_list",
         "profile",
         "roles",
-        "email"      ],
+        "email"
+      ],
       "webOrigins": ["*"]
     },
-    
+    {
+      "id": "47c3fb06-86d7-4fe4-8afb-0ef55714c43e",
+      "clientId": "seqdb",
+      "enabled": true,
+      "publicClient": true,
+      "redirectUris": ["*"],
+      "defaultClientScopes": [
+        "web-origins",
+        "dina-agent",
+        "role_list",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "webOrigins": ["*"]
+    },
     {
       "id": "b443147e-eed5-4aec-8b28-d7aa2cb78070",
       "clientId": "realm-management",
@@ -53,22 +69,6 @@
         "configure": true,
         "manage": true
       }
-    },    
-    {
-      "id": "47c3fb06-86d7-4fe4-8afb-0ef55714c43e",
-      "clientId": "seqdb",
-      "enabled": true,
-      "publicClient": true,
-      "redirectUris": ["*"],
-      "defaultClientScopes": [
-        "web-origins",
-        "dina-agent",
-        "role_list",
-        "profile",
-        "roles",
-        "email"
-      ],
-      "webOrigins": ["*"]
     }
   ],
   "roles": {
@@ -138,10 +138,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "realm-management": [
-                "query-groups",
-                "query-users"
-              ]
+              "realm-management": ["query-groups", "query-users"]
             }
           },
           "clientRole": true,
@@ -305,9 +302,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "realm-management": [
-                "query-clients"
-              ]
+              "realm-management": ["query-clients"]
             }
           },
           "clientRole": true,
@@ -349,9 +344,7 @@
           "name": "staff",
           "path": "/cnc/staff",
           "attributes": {},
-          "realmRoles": [
-            "staff"
-          ],
+          "realmRoles": ["staff"],
           "clientRoles": {},
           "subGroups": []
         },
@@ -360,9 +353,7 @@
           "name": "collection-manager",
           "path": "/cnc/collection-manager",
           "attributes": {},
-          "realmRoles": [
-            "collection-manager"
-          ],
+          "realmRoles": ["collection-manager"],
           "clientRoles": {},
           "subGroups": []
         }
@@ -381,9 +372,7 @@
           "name": "collection-manager",
           "path": "/dao/collection-manager",
           "attributes": {},
-          "realmRoles": [
-            "collection-manager"
-          ],
+          "realmRoles": ["collection-manager"],
           "clientRoles": {},
           "subGroups": []
         },
@@ -392,9 +381,7 @@
           "name": "staff",
           "path": "/dao/staff",
           "attributes": {},
-          "realmRoles": [
-            "staff"
-          ],
+          "realmRoles": ["staff"],
           "clientRoles": {},
           "subGroups": []
         }
@@ -805,9 +792,7 @@
   "scopeMappings": [
     {
       "clientScope": "dina-agent",
-      "roles": [
-        "user"
-      ]
+      "roles": ["user"]
     }
   ],
   "users": [

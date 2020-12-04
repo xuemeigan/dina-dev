@@ -1,12 +1,29 @@
 # Additional launch configuration for local dev instances.
 version: "3.7"
 services:
-  agent-api:
-    image: maven:3.6.3-jdk-11-slim
+  minio:
+    image: minio/minio
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server /data        
+  database:
+    image: postgres:12.4
+    environment:
+      POSTGRES_DB: objectstore
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p
+    volumes:
+      - ./initdb.sql:/docker-entrypoint-initdb.d/1-initdb.sql
+    ports:
+      - "5432:5432"
+
+  objectstore-api:
+    image: maven:3.6.3-jdk-11
     # Run as Docker host user so generated files don't belong to root:
     user: $UID:$GID
     volumes:
-      - "../repos/agent-api:/app"
+      - "../repos/objectstore-api:/app"
       # Share host users:
       - "/etc/group:/etc/group:ro"
       - "/etc/passwd:/etc/passwd:ro"
@@ -24,13 +41,18 @@ services:
       -Dspring-boot-maven-plugin.fork=true
       -Dspring-boot.run.jvmArguments=\"
         -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005
-        -Dspring.datasource.url=jdbc:postgresql://database/agent_test?currentSchema=agent
+        -Dspring.datasource.url=jdbc:postgresql://database/objectstore?currentSchema=object_store
         -Dspring.datasource.username=postgres
         -Dspring.datasource.password=p
         -Dspring.datasource.continue-on-error=true
         -Dspring.liquibase.user=postgres
         -Dspring.liquibase.password=p
-        -Dkeycloak.enabled=false
+        -Dspring.servlet.multipart.max-file-size=2GB
+        -Dspring.servlet.multipart.max-request-size=2GB
+        -Dminio.host=minio
+        -Dminio.port=9000
+        -Dminio.accessKey=minio
+        -Dminio.secretKey=minio123
       \"
-      clean spring-boot:run
+      clean spring-boot:run 
       "
