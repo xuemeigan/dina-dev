@@ -1,0 +1,29 @@
+# Additional launch configuration for local dev instances.
+version: "3.7"
+services:
+  # Nextjs's dev-mode server that hot-reloads the UI source code:
+  dina-ui-dev-server:
+    image: node:12.16.1
+    volumes:
+      - "../repos/dina-ui:/dina-ui"
+      # Share host home directory for yarn cache:
+      - /home/${USER}:/home/${USER}
+      # Share host users:
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/shadow:/etc/shadow:ro
+    # Run as Docker host user so generated files don't belong to root:
+    user: $UID:$GID
+    stop_signal: SIGKILL
+    command: >
+      bash -c "
+      yarn --cwd=/dina-ui/packages/dina-ui ;
+      yarn --cwd=/dina-ui/packages/dina-ui dev
+      "
+  # Front-end gateway that proxies URLs to the correct service:
+  dina-ui:
+    image: caddy/caddy:2.0.0-alpine
+    volumes:
+      - "../repos/dina-ui/packages/dina-ui/dev.Caddyfile:/etc/caddy/Caddyfile"
+    environment:
+      UI_DEV_SERVER_ADDRESS: dina-ui-dev-server:3000
