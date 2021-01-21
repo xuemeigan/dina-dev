@@ -39,7 +39,7 @@ services:
         -Dkeycloak.enabled=true
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean compile spring-boot:run
       "
   seqdb-api:
     image: maven:3.6.3-jdk-11
@@ -74,7 +74,7 @@ services:
         -Dkeycloak.enabled=true
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean compile spring-boot:run
       "
   agent-api:
     image: maven:3.6.3-jdk-11
@@ -109,7 +109,7 @@ services:
         -Dkeycloak.resource=dina
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean compile spring-boot:run
       "
   user-api:
     image: maven:3.6.3-jdk-11
@@ -142,13 +142,12 @@ services:
         -Dspring.liquibase.password=p
         -Dspring.liquibase.liquibase-schema=userapi
         -Dkeycloak.enabled=true
-        -Dkeycloak.resource=dina
+        -Dkeycloak.resource=user-svc
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
-        -Dkeycloak.secret=03eff0eb-a81b-4213-bad7-49457778d4eb
+        -Dkeycloak.credentials.secret=120c0b7a-5ed2-4295-9a31-29c2fcbc714f
       \"
-      spring-boot:run  
+      clean compile spring-boot:run
       "
-
   collection-api:
     image: maven:3.6.3-jdk-11
     # Run as Docker host user so generated files don't belong to root:
@@ -178,10 +177,11 @@ services:
         -Dspring.datasource.continue-on-error=true
         -Dspring.liquibase.user=postgres
         -Dspring.liquibase.password=p
-        -Dkeycloak.enabled=true  
-        -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth        
+        -Dkeycloak.enabled=true
+        -Dkeycloak.resource=dina
+        -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
       \"
-      spring-boot:run
+      clean compile spring-boot:run
       "
   # Nextjs's dev-mode server that hot-reloads the UI source code:
   dina-ui-dev-server:
@@ -204,7 +204,7 @@ services:
       "
   # Front-end gateway that proxies URLs to the correct service:
   dina-ui:
-    image: caddy/caddy:2.0.0-alpine
+    image: caddy/caddy:2.3.0-alpine
     volumes:
       - "../repos/dina-ui/packages/dina-ui/dev.Caddyfile:/etc/caddy/Caddyfile"
     environment:

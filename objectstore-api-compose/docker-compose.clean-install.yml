@@ -54,5 +54,5 @@ services:
         -Dminio.accessKey=minio
         -Dminio.secretKey=minio123
       \"
-      clean spring-boot:run 
+      clean test-compile 
       "
