@@ -1,0 +1,36 @@
+# Additional launch configuration for local dev instances.
+version: "3.7"
+services:
+  dina-user-api:
+    image: maven:3.6.3-jdk-11-slim
+    # Run as Docker host user so generated files don't belong to root:
+    user: $UID:$GID
+    volumes:
+      - "../repos/dina-user-api:/app"
+      # Share host users:
+      - "/etc/group:/etc/group:ro"
+      - "/etc/passwd:/etc/passwd:ro"
+      - "/etc/shadow:/etc/shadow:ro"
+      # Use the host maven repository:
+      - "~/.m2:/var/maven/.m2"
+    ports:
+      - "5005:5005" # debug port
+    # The maven container ignores the docker-compose "environment" field, so pass in variables in the command:
+    command: >
+      bash -c "
+      mvn
+      -f /app/pom.xml
+      -Duser.home=/var/maven
+      -Dspring-boot-maven-plugin.fork=true
+      -Dspring-boot.run.jvmArguments=\"
+        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005
+        -Dspring.datasource.url=jdbc:postgresql://database/dina_user_test?currentSchema=dina_user
+        -Dspring.datasource.username=postgres
+        -Dspring.datasource.password=p
+        -Dspring.datasource.continue-on-error=true
+        -Dspring.liquibase.user=postgres
+        -Dspring.liquibase.password=p
+        -Dkeycloak.enabled=true
+      \"
+      clean spring-boot:run
+      "
