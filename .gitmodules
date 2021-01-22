@@ -29,6 +29,16 @@ url = https://github.com/xuemeigan/dina-dev-doc.git
 
 [submodule "object-store-specs"]
 path = repos/object-store-specs
-url = https://github.com/DINA-Web/object-store-specs
+url = https://github.com/DINA-Web/object-store-specs.git
 
+[submodule "dina-base-api"]
+path = repos/dina-base-api
+url = https://github.com/AAFC-BICoE/dina-base-api.git
 
+[submodule "dina-user-api"]
+path = repos/dina-user-api
+url = https://github.com/AAFC-BICoE/dina-user-api.git
+
+[submodule "natural-history-collection-api"]
+path = repos/natural-history-collection-api
+url = https://github.com/AAFC-BICoE/natural-history-collection-api.git

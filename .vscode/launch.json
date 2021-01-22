@@ -1,21 +1,33 @@
 {
   "version": "0.2.0",
-  "configurations": [
+  "configurations": [                           
     {
       "type": "java",
-      "name": "Debug (Attach)",
+      "name": "object store api",
       "request": "attach",
       "hostName": "localhost",
       "port": 5005
+    },    
+    {
+      "name": "agent api",
+      "request": "attach",
+      "type": "java",
+      "hostName": "localhost",
+      "port": 5006
     },
-  
-    
     {
-      "name": "Attach java",
-      "request": "attach",
       "type": "java",
+      "name": "dina user api",
+      "request": "attach",
       "hostName": "localhost",
-      "port": 5005
-    }
+      "port": 5007
+    },
+    {
+      "type": "java",
+      "name": "collection api",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5009
+    },        
   ]
 }
