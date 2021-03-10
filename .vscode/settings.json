@@ -1,10 +1,10 @@
 {
-  "java.test.config": [
+  /* "java.test.config": [
     {
       "name": "myTestConfiguration",
       "workingDirectory": "${workspaceFolder}",
       "env": {
-        "spring.datasource.url": "jdbc:postgresql://172.33.33.2/objectstore?currentSchema=object_store",
+        "spring.datasource.url": "jdbc:postgresql://172.33.33.3/objectstore?currentSchema=object_store",
         "spring.datasource.username": "postgres",
         "spring.datasource.password": "p",
         "spring.datasource.continue-on-error": "true",
@@ -22,7 +22,7 @@
       "name": "agentConfiguration",
       "workingDirectory": "${workspaceFolder}",
       "env": {
-        "spring.datasource.url": "jdbc:postgresql://172.33.33.4/agent_test?currentSchema=agent",
+        "spring.datasource.url": "jdbc:postgresql://172.33.33.3/agent_test?currentSchema=agent",
         "spring.datasource.username": "postgres",
         "spring.datasource.password": "p",
         "spring.datasource.continue-on-error": "true",
@@ -31,7 +31,7 @@
       }
     }    
   ],
-  "java.test.defaultConfig": "agentConfiguration",
+  "java.test.defaultConfig": "myTestConfiguration",*/
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -54,5 +54,6 @@
       "localPort": 80,
       "remotePort": 80
     }
-  ]
+  ],
+  "maven.view": "hierarchical",
 }
