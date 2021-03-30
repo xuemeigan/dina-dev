@@ -1,0 +1,11 @@
+  const { locale, setLocale } = useContext(intlContext);
+
+  let filterByName = "names[0].name";
+  if (person && person.organizations) {
+    const orgNamesLengthArr = person.organizations.map(org => org.names.length);
+    //only when all orgs have both languages will try to set the user locale
+    //assume all names are sorted by language
+    if (!orgNamesLengthArr.includes(1)) {
+      person.organizations[0].names[0].languageCode.toLowerCase().equals
+    }
+  }

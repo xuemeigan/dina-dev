@@ -1,0 +1,207 @@
+app,key,english,french
+common,AND,AND,ET
+common,IS,IS,EST
+common,ISNOT,IS NOT,N'EST PAS
+common,OR,OR,OU
+common,areYouSure,Are you sure?,Êtes-vous certain?
+common,backToListButtonText,Back to List,Retour à la liste
+common,cancelButtonText,Cancel,Annuler
+common,checkAllTooltipMessage,Check this header box to check all visible items in this page.,
+common,closeButtonText,Close,Fermer
+common,createButtonText,Create New,Créer nouveau
+common,deleteButtonText,Delete,Supprimer
+common,editButtonText,Edit,Modifier
+common,field_author,Author,
+common,field_changedProperties,Changed Properties,
+common,field_commitDateTime,Commit Date and Time,
+common,field_resourceName,Resource Name,
+common,field_snapshotType,Snapshot Type,
+common,field_version,Version,
+common,filterBlankField,Blank Field,Champ vide
+common,filterExactMatch,Exact Match,Correspondance exacte
+common,filterGreaterThan,Greater Than,Plus grand que
+common,filterLessThan,Less Than,Plus petit que
+common,filterPartialMatch,Partial Match,Correspondance partielle
+common,filterSubmitButtonText,Filter List,Filtrer la liste
+common,loadingText,Loading...,Chargement en cours...
+common,loggedInAsUser,Logged in as: {name},Connecté en tant que : {name}
+common,logoutBtn,Logout,Fermer la session
+common,next,Next,
+common,no,No,Non
+common,of,of,
+common,noRowsFound,No Rows Found,
+common,previous,Previous,
+common,resetButtonText,Reset,Réinitialiser
+common,rows,rows,
+common,select,Select,
+common,selected,selected,
+common,showChanges,Show Changes,
+common,submitBtnText,Save,Enregistrer
+common,tableTotalCount,Total matched records: {totalCount},Nombre de dossiers correspondants : {totalCount}
+common,queryTableMultiSortExplanation,"To sort by multiple columns: Click one column header to sort by that column, then press shift while you click an additional header.","Pour trier la liste en fonction de plusieurs colonnes : Cliquez sur un en-tête de colonne pour trier par cette colonne, puis appuyez sur la touche Maj pendant que vous cliquez sur un autre en-tête."
+common,queryTableMultiSortTooltipTitle,Multi-column sorting,Trier en fonction de plusieurs colonnes 
+common,yes,Yes,Oui
+dina,addFilesButton,Add Files,Ajouter des fichiers
+dina,addManagedAttributeButtonText,Add New Managed Attribute,Ajouter un nouvel attribut géré
+dina,addObjectSubtypeTitle,Add New Object Subtype,Ajouter un nouveau sous-type d'objet
+dina,addPersonTitle,Add Person,Ajouter une personne
+dina,addPersonButtonText,Add Person,Ajouter une personne
+dina,addPersonPopupTooltip,Add Person without leaving the page,Ajouter une personne sans quitter la page
+dina,agentsSectionTitle,Agents,Agents
+dina,appTitle,DINA,DINA
+dina,attributeLabel,Attribute,Attribut
+dina,cancelButtonText,Cancel,Annuler
+dina,changedProperties,Changes,Modifications
+dina,closePreviewButtonText,Close Preview,Fermer la prévisualisation
+dina,deleteButtonText,Delete,Supprimer
+dina,deleteSelectedButtonText,Delete Selected,Supprimer les éléments sélectionnés
+dina,editObjectSubtypeTitle,Edit Object Subtype,Modifier le sous-type d'objet
+dina,editPersonTitle,Edit Person,Modifier la personne
+dina,editSelectedButtonText,Edit Selected,Modifier les éléments sélectionnés
+dina,feedbackButtonText,Feedback,Commentaires
+dina,field_acceptedValues,Accepted Values,
+dina,field_acCaption,Caption,Légende
+dina,field_acSubtype,Ac Subtype,
+dina,field_acDerivedFrom,Derived From,Tiré de
+dina,field_acDigitizationDate,Date Original Version Created,Date de création de la version originale
+dina,field_acHashFunction,Hash Function,Fonction de hachage
+dina,field_acHashValue,Hash,Hachage
+dina,field_acMetadataCreator.displayName,Upload By,Téléchargé par
+dina,field_acSubType,Object SubType,Sous-type d'objet
+dina,field_acTags,Tags,Balises
+dina,field_dcCreator.displayName,Document Creator,Créateur du document
+dina,field_createdBy,Created By,
+dina,field_createdDate,Created Date,
+dina,field_createdOn,Created On,
+dina,field_dcFormat,Media Format,Format du média
+dina,field_dcRights,Rights Statement,Déclaration sur les droits
+dina,field_dcType,Stored Object Type,Type d'objet stocké
+dina,field_description,Description,
+dina,field_displayName,Display Name,
+dina,field_editableBuiltInAttributes,Built In Attributes,Attributs intégrés
+dina,field_editableManagedAttributes,Managed Attributes,Attributs gérés
+dina,field_email,Email,
+dina,field_license,License,Licence
+dina,field_managedAttributeAcceptedValue,Accepted Value,Valeur acceptée
+dina,field_managedAttributeCreatedOn,Created On,Créé le
+dina,field_managedAttributeCreatedBy,Created By,Créé par
+dina,field_managedAttributeDescEn,English Description,Description anglaise
+dina,field_managedAttributeDescFr,French Description,Description française
+dina,field_managedAttributeMandatoryFieldsError,Both name and type are mandatory fields,Le nom et le type sont des champs obligatoires
+dina,field_managedAttributeName,Attribute Name,Nom de l'attribut
+dina,field_managedAttributeType,Type,Type
+dina,field_originalFilename,Original Filename,Nom du fichier original
+dina,field_type,Type,
+dina,field_xmpMetadataDate,Date Metadata Applied,Date d'application des métadonnées
+dina,field_xmpRightsWebStatement,Reuse Rights Statement,Déclaration sur les droits de réutilisation
+dina,footerContactInfo,Contact information,
+dina,footerTermsAndConditions,Terms and conditions,
+dina,footerPrivacy,Privacy,
+dina,forTestingPurposesOnlyMessage,For testing purpose only. Only unclassified data should be uploaded. Any uploaded data can be deleted at any given moment.,
+dina,governmentOfCanada,Government of Canada,Gouvernement du Canada
+dina,groupMustBeSelected,Group must be selected,Un groupe doit être sélectionné 
+dina,managedAttributeEditTitle,Edit Managed Attribute,Modifier l'attribut géré
+dina,managedAttributeListTitle,Managed Attributes,Attributs gérés
+dina,managedAttributeValueLabel,Value,Valeur
+dina,metadataBucketNameLabel,Bucket Name,Nom de la catégorie
+dina,metadataBuiltInAttributesLabel,Built-in Attributes,Attributs intégrés
+dina,metadataBulkEditTagsLabel,Tags (Comma-separated),Balises (séparées par une virgule)
+dina,metadataBulkEditTitle,Edit Metadata,Modifier les métadonnées
+dina,metadataDcFormatLabel,DcFormat,Format de l'élément dc
+dina,metadataDetailsPageLink,Details Page,Page des détails
+dina,metadataFileExtensionLabel,File Extension,Extension du fichier
+dina,metadataFileIdentifierLabel,File Identifier,Identificateur du fichier
+dina,metadataFileStorageDetailsLabel,File Storage,Stockage du fichier
+dina,metadataFilenameLabel,File Name,Nom du fichier 
+dina,metadataFirstDigitalVersionCreatedDateLabel,First Digital Version Created Date,Date de création de la première version numérique
+dina,metadataFormTitle,Metadata,Métadonnées
+dina,metadataHashFunctionLabel,Hash Function,Fonction de hachage
+dina,metadataHashValueLabel,Hash Value,Valeur de hachage
+dina,metadataLastMetadataModificationTimeLabel,Last Metadata Modification Time,Date de la dernière modification des métadonnées
+dina,metadataListGalleryLayout,Gallery,Galerie
+dina,metadataListTableLayout,Table,Tableau
+dina,metadataManagedAttributesLabel,Managed Attributes,Attributs gérés
+dina,metadataMediaDetailsLabel,Media,Média
+dina,metadataObjectTypeLabel,Stored Object Type,Type d'objet stocké
+dina,metadataPageLink,Details Page,Page des détails
+dina,metadataRevisionsListTitle,Revisions for {name},Révisions pour {name}
+dina,metadataRightsDetailsLabel,Rights,Droits
+dina,metadataTagsLabel,Tags,Balises
+dina,metadataUploadDetailsLabel,Upload Details,Télécharger les détails
+dina,noFileToDisplay,No file to display,Aucun fichier à afficher
+dina,objectListTitle,Stored Objects,Objets stockés
+dina,objectStoreDetailsTitle,Object Store Details,Détails sur le stockage de l'objet
+dina,objectStoreTitle,Object Store,Stockage de l'objet
+dina,objectSubtypeListTitle,Object Subtypes,Sous-types d'objet
+dina,objectSubtypeTitle,Object Subtype,Sous-type d'objet
+dina,personListTitle,Persons,Personnes
+dina,personViewTitle,View Person,Afficher la personne
+dina,revisionsButtonText,Revisions,Révisions
+dina,revisionsByUserPageTitle,Revisions by user,Révisions par l'utilisateur
+dina,searchButton,Search,Recherche
+dina,thumbnailNotAvailableText,No thumbnail available,Aucune vignette disponible
+dina,uploadButtonText,Upload,Télécharger
+dina,uploadFormInstructions,"Drag and drop files here or click to open browse dialog. Only image, audio, video, .pdf, .doc and docx are accepted.","Glisser-déposer les fichiers ici ou cliquer pour ouvrir la fenêtre de dialogue. Seuls les fichiers graphiques, audio, vidéo, .pdf, .doc et .docx sont acceptés."
+dina,uploadPageTitle,Upload Files,Télécharger les fichiers
+dina,userMustBelongToGroup,User must belong to a Group,L'utilisateur doit appartenir à un groupe
+dina,valueLabel,Value,Valeur
+dina,viewPreviewButtonText,Preview,Prévisualiser
+dina,addOrganizationTitle,Add New Organization,Ajouter une nouvelle organisation
+dina,editOrganizationTitle,Edit Organization,Modifier l'organisation
+dina,editOrganizationAliasesLabel,Aliases (comma seperated),Pseudonymes (séparés par une virgule)
+dina,organizationListTitle,Organizations,Organisations
+dina,organizationViewTitle,View Organization,Afficher l'organisation
+seqdb,addPcrPrimerTitle,Add PCR Primer,Ajouter une amorce PCR
+seqdb,addPcrProfileTitle,Add Thermocycler Profile,Ajouter un profil de thermocycleur
+seqdb,addProductTitle,Add Product,Ajouter un produit
+seqdb,addProtocolTitle,Add Protocol,Ajouter un protocole
+seqdb,addRegionTitle,Add Region,Ajouter une région
+seqdb,addWorkflowTitle,Add NGS Workflow,Ajouter un flux de SNG
+seqdb,appTitle,Sequence Database,Sequence Database (fr)
+seqdb,availableSamplesTitle,Available Samples,Échantillons disponibles
+seqdb,backToListButtonText,Back to List,Retour à la liste
+seqdb,cancelButtonText,Cancel,Annuler
+seqdb,createButtonText,Create New,Créer nouveau
+seqdb,deselectAllCheckedSamplesButtonText,<-- Deselect all checked samples,<-- Désélectionner tous les échantillons cochés 
+seqdb,deselectButtonText,Deselect,Désélectionner
+seqdb,editPcrPrimerTitle,Edit PCR Primer,Modifier l'amorce PCR
+seqdb,editPcrProfileTitle,Edit Thermocycler Profile,Modifier le profil de thermocycleur
+seqdb,editProductTitle,Edit Product,Modifier le produit
+seqdb,editProtocolTitle,Edit Protocol,Modifier le protocole
+seqdb,editRegionTitle,Edit Region,Modifier la région
+seqdb,editWorkflowTitle,Edit NGS Workflow,Modifier le flux de SNG
+seqdb,field_group.groupName,Group Name,Nom du groupe
+seqdb,field_name,Name,Nom
+seqdb,notShearedStatus,Not Sheared,Sans cisaillement
+seqdb,notSizeSelectedStatus,No Size Selection,Sans sélection de taille
+seqdb,pcrPrimerListTitle,PCR Primers,Amorces PCR
+seqdb,pcrPrimerViewTitle,PCR Primer,Amorce PCR
+seqdb,pcrProfileListTitle,Thermocycler Profiles,Profils de thermocycleur
+seqdb,pcrProfileViewTitle,Thermocycler Profile,Profil de thermocycleur
+seqdb,plpDetailsFormTitle,Add New Shearing/Size Selection Details,Ajouter détails sur le cisaillement ou la sélection de taille
+seqdb,plpEditModeLabel,Edit,Modifier
+seqdb,plpShearingModeLabel,Shearing Details,Détails sur le cisaillement
+seqdb,plpSizeModeLabel,Size Selection Details,Détails sur la sélection de taille
+seqdb,plpStepTitle,Shearing/Size Selection,Cisaillement et sélection de taille
+seqdb,plpViewModeSelectorLabel,View mode: ,Mode d'affichage :
+seqdb,productListTitle,Products,Produits
+seqdb,productUpcFieldHelpText,Note: Universal Product Code can be read from barcode scanner in keyboard mode,Nota : Le code universel de produit peut être lu par un lecteur de codes à barres en mode clavier
+seqdb,productViewTitle,Product,Produit
+seqdb,protocolListTitle,Protocols,Protocoles
+seqdb,protocolViewTitle,Protocol,Protocole
+seqdb,regionListTitle,Regions,Régions
+seqdb,regionViewTitle,Region,Région
+seqdb,removeShearingDetailsButtonText,Remove selected Shearing details,Supprimer les détails sur le cisaillement sélectionnés
+seqdb,removeSizeSelectionDetailsButtonText,Remove selected Size Selection details,Supprimer les détails sur la sélection de taille sélectionnés
+seqdb,sampleSelectionTitle,Sample Selection,Sélection d'échantillons
+seqdb,selectAllCheckedSamplesButtonText,Select all checked samples -->,Sélectionner tous les échantillons cochés -->
+seqdb,selectButtonText,Select,Sélectionner
+seqdb,selectedSamplesTitle,Selected Samples,Échantillons sélectionnés
+seqdb,shearedStatus,Sheared,Cisaillé
+seqdb,shearingLabel,Shearing,Cisaillement
+seqdb,sizeSelectedStatus,Size Selection Added,Sélection de taille ajoutée
+seqdb,sizeSelectionLabel,Size Selection,Sélection de taille
+seqdb,workflowDetailsTab,Details,Détails
+seqdb,workflowListTitle,NGS Workflows,Flux de SNG
+seqdb,workflowStepTab,Step {number}: {name},Étape {number} : {name}
+seqdb,workflowViewTitle,NGS Workflow,Flux de SNG

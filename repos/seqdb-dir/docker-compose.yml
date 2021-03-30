@@ -1,0 +1,52 @@
+version: "3.7"
+services:
+  database:
+    image: postgres:9.6
+    environment:
+      POSTGRES_DB: seqdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p
+    volumes:
+      - ./seqdbSampleData.sql:/docker-entrypoint-initdb.d/1-seqdb-sampledata.sql
+      # - "$HOME/pgdata:/var/lib/postgresql/data"
+    ports:
+      - "5433:5432"
+  seqdb:
+    image: maven:3.6.3-jdk-11
+    user: "1000"
+    volumes:
+      - "./seqdb:/app"
+      - "/etc/group:/etc/group:ro"
+      - "/etc/passwd:/etc/passwd:ro"
+      - "/etc/shadow:/etc/shadow:ro"
+      # Use the host maven repository:
+      - "~/.m2:/var/maven/.m2"
+      - "./sentinel_share/:/mnt/sentinel_share/"
+      - "./storage/:/var/lib/seqdb/"
+    ports:
+      - "8080:8080" # app port
+      - "5005:5005" # debug port
+    environment:
+      MAVEN_CONFIG: /var/maven/.m2
+    # The maven container ignores the docker-compose "environment" field, so pass in variables in the command:
+    command: >
+      bash -c "
+      mvn -f /app/seqdb.dbi/pom.xml install -Dmaven.test.skip=true -Duser.home=/var/maven ;
+      mvn
+      -f /app/seqdb.web/pom.xml
+      -Duser.home=/var/maven
+      -Dspring-boot-maven-plugin.fork=true
+      -Dspring-boot.run.jvmArguments=\"
+        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+        -Dspring.datasource.url=jdbc:postgresql://database:5432/seqdb?currentSchema=seqdb
+        -Dspring.datasource.username=postgres
+        -Dspring.datasource.password=p
+        -Dspring.jpa.show-sql=true
+        -Dspring.liquibase.user=postgres
+        -Dspring.liquibase.password=p
+        -Dspring.liquibase.contexts=initial-cnc-data,schema-change,initial-data,data-migration,test-data
+        -Dspring.datasource.continue-on-error=true
+        -Dimport-sample-accounts=true
+      \"
+      clean compile spring-boot:run
+      "
