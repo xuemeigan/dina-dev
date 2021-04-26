@@ -146,7 +146,7 @@ services:
         -Dkeycloak.auth-server-url=http://${KEYCLOAK_DOMAIN}/auth
         -Dkeycloak.credentials.secret=120c0b7a-5ed2-4295-9a31-29c2fcbc714f
       \"
-      spring-boot:run
+      clean compile spring-boot:run
       "
   collection-api:
     image: maven:3.6.3-jdk-11
