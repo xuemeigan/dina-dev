@@ -3,7 +3,10 @@
   "realm": "dina",
   "displayName": "DINA",
   "internationalizationEnabled": true,
-  "supportedLocales": ["en", "fr"],
+  "supportedLocales": [
+    "en",
+    "fr"
+  ],
   "defaultLocale": "en",
   "enabled": true,
   "sslRequired": "none",
@@ -16,7 +19,9 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "120c0b7a-5ed2-4295-9a31-29c2fcbc714f",
-      "redirectUris": ["*"],
+      "redirectUris": [
+        "*"
+      ],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -90,8 +95,12 @@
           }
         }
       ],
-      "defaultClientScopes": ["roles"],
-      "optionalClientScopes": ["offline_access"]
+      "defaultClientScopes": [
+        "roles"
+      ],
+      "optionalClientScopes": [
+        "offline_access"
+      ]
     },
     {
       "id": "fe3ef8c1-e615-4528-960b-e86b3102c7c0",
@@ -106,8 +115,7 @@
         "role_list",
         "profile",
         "roles",
-        "email"
-      ],
+        "email"      ],
       "webOrigins": ["*"]
     },
     {
@@ -198,7 +206,10 @@
           "composite": true,
           "composites": {
             "client": {
-              "realm-management": ["query-groups", "query-users"]
+              "realm-management": [
+                "query-groups",
+                "query-users"
+              ]
             }
           },
           "clientRole": true,
@@ -362,7 +373,9 @@
           "composite": true,
           "composites": {
             "client": {
-              "realm-management": ["query-clients"]
+              "realm-management": [
+                "query-clients"
+              ]
             }
           },
           "clientRole": true,
@@ -387,8 +400,12 @@
       "name": "aafc",
       "path": "/aafc",
       "attributes": {
-        "groupLabel-en": ["AAFC"],
-        "groupLabel-fr": ["AAC"]
+        "groupLabel-en": [
+          "AAFC"
+        ],
+        "groupLabel-fr": [
+          "AAC"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -398,7 +415,20 @@
           "name": "collection-manager",
           "path": "/aafc/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "4ad80118-6317-4a3d-af07-a83a3edef5b3",
+          "name": "dina-admin",
+          "path": "/aafc/dina-admin",
+          "attributes": {},
+          "realmRoles": [
+            "dina-admin"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -407,7 +437,9 @@
           "name": "staff",
           "path": "/aafc/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -416,7 +448,9 @@
           "name": "student",
           "path": "/aafc/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -427,7 +461,9 @@
       "name": "amf",
       "path": "/amf",
       "attributes": {
-        "groupLabel-en": ["AMF"]
+        "groupLabel-en": [
+          "AMF"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -437,7 +473,9 @@
           "name": "staff",
           "path": "/amf/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -446,7 +484,9 @@
           "name": "collection-manager",
           "path": "/amf/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -455,7 +495,9 @@
           "name": "student",
           "path": "/amf/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -466,7 +508,9 @@
       "name": "ccfc",
       "path": "/ccfc",
       "attributes": {
-        "groupLabel-en": ["CCFC"]
+        "groupLabel-en": [
+          "CCFC"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -476,7 +520,9 @@
           "name": "staff",
           "path": "/ccfc/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -485,7 +531,9 @@
           "name": "collection-manager",
           "path": "/ccfc/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -494,7 +542,9 @@
           "name": "student",
           "path": "/ccfc/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -505,7 +555,9 @@
       "name": "cnc",
       "path": "/cnc",
       "attributes": {
-        "groupLabel-en": ["CNC"]
+        "groupLabel-en": [
+          "CNC"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -515,7 +567,9 @@
           "name": "staff",
           "path": "/cnc/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -524,7 +578,9 @@
           "name": "collection-manager",
           "path": "/cnc/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -533,7 +589,9 @@
           "name": "student",
           "path": "/cnc/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -544,7 +602,9 @@
       "name": "cpvc",
       "path": "/cpvc",
       "attributes": {
-        "groupLabel-en": ["CPVC"]
+        "groupLabel-en": [
+          "CPVC"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -554,7 +614,9 @@
           "name": "staff",
           "path": "/cpvc/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -563,7 +625,9 @@
           "name": "student",
           "path": "/cpvc/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -572,7 +636,9 @@
           "name": "collection-manager",
           "path": "/cpvc/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -583,7 +649,9 @@
       "name": "dao",
       "path": "/dao",
       "attributes": {
-        "groupLabel-en": ["DAO"]
+        "groupLabel-en": [
+          "DAO"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -593,7 +661,9 @@
           "name": "collection-manager",
           "path": "/dao/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -602,7 +672,9 @@
           "name": "staff",
           "path": "/dao/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -611,7 +683,59 @@
           "name": "student",
           "path": "/dao/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
+          "clientRoles": {},
+          "subGroups": []
+        }
+      ]
+    },
+    {
+      "id": "80edca24-9556-4072-8950-23d6f1f2a652",
+      "name": "daom",
+      "path": "/daom",
+      "attributes": {
+        "groupLabel-en": [
+          "DAOM"
+        ],
+        "groupLabel-fr": [
+          "DAOM"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {},
+      "subGroups": [
+        {
+          "id": "486c5b8b-da57-4b30-9891-f3a801a8d64c",
+          "name": "collection-manager",
+          "path": "/daom/collection-manager",
+          "attributes": {},
+          "realmRoles": [
+            "collection-manager"
+          ],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "f321f05d-a161-4949-a370-b115eeea7cb6",
+          "name": "staff",
+          "path": "/daom/staff",
+          "attributes": {},
+          "realmRoles": [
+            "staff"
+          ],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "a03428f5-1096-46ac-ab23-7859be98a313",
+          "name": "student",
+          "path": "/daom/student",
+          "attributes": {},
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -622,7 +746,9 @@
       "name": "ml",
       "path": "/ml",
       "attributes": {
-        "groupLabel-en": ["ML"]
+        "groupLabel-en": [
+          "ML"
+        ]
       },
       "realmRoles": [],
       "clientRoles": {},
@@ -632,7 +758,9 @@
           "name": "staff",
           "path": "/ml/staff",
           "attributes": {},
-          "realmRoles": ["staff"],
+          "realmRoles": [
+            "staff"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -641,7 +769,9 @@
           "name": "collection-manager",
           "path": "/ml/collection-manager",
           "attributes": {},
-          "realmRoles": ["collection-manager"],
+          "realmRoles": [
+            "collection-manager"
+          ],
           "clientRoles": {},
           "subGroups": []
         },
@@ -650,7 +780,9 @@
           "name": "student",
           "path": "/ml/student",
           "attributes": {},
-          "realmRoles": ["student"],
+          "realmRoles": [
+            "student"
+          ],
           "clientRoles": {},
           "subGroups": []
         }
@@ -1061,7 +1193,9 @@
   "scopeMappings": [
     {
       "clientScope": "dina-agent",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     }
   ],
   "users": [
@@ -1069,12 +1203,7 @@
       "username": "admin",
       "enabled": true,
       "realmRoles": ["admin", "user"],
-      "credentials": [
-        {
-          "type": "password",
-          "value": "admin"
-        }
-      ],
+      "credentials": [{ "type": "password", "value": "admin" }],
       "attributes": {
         "agentId": "fdb72d9d-4ea1-4edf-baf2-6feafb90fd12"
       }
@@ -1084,12 +1213,7 @@
       "enabled": true,
       "realmRoles": ["user"],
       "groups": ["aafc", "cnc"],
-      "credentials": [
-        {
-          "type": "password",
-          "value": "user"
-        }
-      ],
+      "credentials": [{ "type": "password", "value": "user" }],
       "attributes": {
         "agentId": "9c403c4b-c849-43c4-bbc1-8bd10b1997e1"
       }
@@ -1099,12 +1223,7 @@
       "enabled": true,
       "realmRoles": ["user"],
       "groups": ["cnc/student"],
-      "credentials": [
-        {
-          "type": "password",
-          "value": "cnc-student"
-        }
-      ],
+      "credentials": [{ "type": "password", "value": "cnc-student" }],
       "attributes": {
         "agentId": "21d4f7ef-98b8-4f46-9963-d843f2fdf65a"
       }
@@ -1113,13 +1232,8 @@
       "username": "dina-admin",
       "enabled": true,
       "realmRoles": ["user", "dina-admin"],
-      "groups": [],
-      "credentials": [
-        {
-          "type": "password",
-          "value": "dina-admin"
-        }
-      ],
+      "groups": ["aafc/dina-admin"],
+      "credentials": [{ "type": "password", "value": "dina-admin" }],
       "attributes": {
         "agentId": "3c47203f-9833-4945-b673-ece4e3bd4f9a"
       }
@@ -1129,12 +1243,7 @@
       "enabled": true,
       "realmRoles": ["user"],
       "groups": ["cnc/collection-manager"],
-      "credentials": [
-        {
-          "type": "password",
-          "value": "cnc-cm"
-        }
-      ],
+      "credentials": [{ "type": "password", "value": "cnc-cm" }],
       "attributes": {
         "agentId": "ba05d46b-6c75-4c92-82d6-e72237d9982f"
       }
@@ -1144,12 +1253,7 @@
       "enabled": true,
       "realmRoles": ["user"],
       "groups": ["cnc/staff"],
-      "credentials": [
-        {
-          "type": "password",
-          "value": "cnc-staff"
-        }
-      ],
+      "credentials": [{ "type": "password", "value": "cnc-staff" }],
       "attributes": {
         "agentId": "34e1de96-cc79-4ce1-8cf6-d0be70ec7bed"
       }
@@ -1160,10 +1264,20 @@
       "serviceAccountClientId": "user-svc",
       "disableableCredentialTypes": [],
       "requiredActions": [],
-      "realmRoles": ["user", "uma_authorization", "offline_access"],
+      "realmRoles": [
+        "user",
+        "uma_authorization",
+        "offline_access"
+      ],
       "clientRoles": {
-        "realm-management": ["view-users", "manage-users"],
-        "account": ["view-profile", "manage-account"]
+        "realm-management": [
+          "view-users",
+          "manage-users"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
       },
       "notBefore": 0,
       "groups": []
